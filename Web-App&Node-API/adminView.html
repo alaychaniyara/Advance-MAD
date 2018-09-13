@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+    <script src="js/script.js"></script>    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Web Portal For Admin Users</title>
+</head>
+
+<body>
+
+    <div class="container" id="adminView">
+        <p class="text-center">ADMIN PORTAL</p>
+        <br>
+        <button class="btn btn-primary" d-block mb-4 data-toggle="collapse" data-target="#collapse-btn-1">
+            Create New User</button>
+        <button class="btn btn-primary" id="loadUsers" d-block mb-4 data-toggle="collapse" data-target="#collapse-btn-2">
+            View Users</button>
+        <button class="btn btn-primary" id="loadSurveys" d-block mb-4 data-toggle="collapse" data-target="#collapse-btn-3">
+            View User Surveys</button>
+    </div>
+
+
+    <div class="collapse mb-5" id="collapse-btn-1">
+        <div class="card">
+            <div class="card-body">
+                <form >
+                    <!-- TEXT FIELD GROUPS -->
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input class="form-control" type="email" id="email" placeholder="Enter email">
+                            </div>
+                    
+                 <div class="form-group">
+                        <label for="password">Password</label>
+                        <input class="form-control" type="password" id="password" placeholder="Enter password">
+                            </div>
+                    
+                  <div class="form-group">
+                        <label for="name">Name</label>
+                        <input class="form-control" type="text" id="name" placeholder="Enter name">
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input class="form-control" type="text" id="age" placeholder="Enter age">
+                    </div>
+                    <div class="form-group">
+                        <label>Address</label>
+                        <input class="form-control" type="text" id="address" placeholder="Enter address">
+                    </div>
+                    <div class="form-group">
+                        <label>Age</label>
+                        <input class="form-control" type="text" id="dateofbirth" placeholder="Enter date of birth">
+                    </div>
+
+                    <button class="btn btn-default" id="createBtn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="collapse mb-5" id="collapse-btn-2">
+        <div class="card">
+            <div class="card-body">
+                View Users!!!!
+                <table class="table" id="userTable">
+                    <thead>
+                        <tr>
+                            <th scope="col">User Name</th>
+                            <th scope="col">Email Address</th>
+                            <th scope="col">Age</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="collapse mb-5" id="collapse-btn-3">
+        <div class="card">
+            <div class="card-body">
+                User Surveys!!!!
+                <table class="table" id="surveyTable">
+                    <thead>
+                        <tr>
+                            <th scope="col">User Name</th>
+                            <th scope="col">Survey ID</th>
+                            <th scope="col">1</th>
+                            <th scope="col">2</th>
+                            <th scope="col">3</th>
+                            <th scope="col">4</th>
+                            <th scope="col">5</th>
+                            <th scope="col">6</th>
+                            <th scope="col">7</th>
+                            <th scope="col">8</th>
+                            <th scope="col">9</th>
+                            <th scope="col">10</th>
+                            <th scope="col">User Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+                $(function(){
+        // var insertUser = "";
+        $('#createbtn').click(function(){
+var api_ip="52.204.170.1"
+            e.preventDefault();
+
+            $.ajax({
+                url: "http://"+api_ip+":3000/users/signup",
+                type: 'POST',
+                contentType: "application/json",
+                data: {
+                        email: $email.val,
+                        password:$password.val,
+                        name: $name.val,
+                        age: $age.val,
+                        address:$address.val,
+                        dateofbirth:$dateofbirth.val
+                },
+                success: function(){
+                    alert("User added");
+                },
+                error: function(){
+                    error: console.error
+                   // alert(error);
+                }
+            });
+        });
+
+
+    $(function () {
+        $('#userTable').DataTable();
+        //specify url to load user data
+        var userDataURL = "";
+        $('#loadUsers').click(function(){
+            $.ajax({
+                type: 'GET',
+                url: userDataURL,
+                contentType: "text/plain",
+                dataType:'json',
+                success: function(data){
+                    userJson = data;
+                    populateUserTable(userJson);
+                },
+                error: function(e){
+                    console.log("Error retrieving users" + JSON.stringify(e));
+                }
+            }); 
+        });
+    });
+
+    function populateUserTable(data){
+        console.log("populating user data....");
+        $('userTable').DataTable().clear;
+        var length = Object.keys(data.users).length;
+        for(var i=1;i<length+1;i++){
+            var user = data.users['user' + 1];
+            $('userTable').dataTable().fnAddData( [
+                user.name,
+                user.email,
+                user.age
+            ]);
+        }
+    }
+
+    $(function () {
+        $('#surveyTable').DataTable();
+           //specify url to load survey data
+           var surveyDataURL = "";
+        $('#loadSurveys').click(function(){
+            $.ajax({
+                type: 'GET',
+                url: surveyDataURL,
+                contentType: "text/plain",
+                dataType:'json',
+                success: function(data){
+                    surveyJson = data;
+                    populateSurveyTable(surveyJson);
+                },
+                error: function(e){
+                    console.log("Error retrieving users" + JSON.stringify(e));
+                }
+            }); 
+        });
+    });
+
+    function populateSurveyTable(data){
+        console.log("populating survey data....");
+        $('surveyTable').DataTable().clear;
+        var length = Object.keys(data.surveys).length;
+        for(var i=1;i<length+1;i++){
+            var user = data.surveys['survey' + 1];
+            $('surveyTable').dataTable().fnAddData( [
+                survey.email,
+                survey.surveyId,
+                survey.answer1,
+                survey.answer2,
+                survey.answer3,
+                survey.answer4,
+                survey.answer5,
+                survey.answer6,
+                survey.answer7,
+                survey.answer8,
+                survey.answer9,
+                survey.answer10,
+                survey.finalScore
+            ]);
+        }
+    }
+    </script>  
+</body>
+</html>

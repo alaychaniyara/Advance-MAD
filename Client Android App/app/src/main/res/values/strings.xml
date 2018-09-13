@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">InClass02-Android</string>
+    <string name="btn_survey">Take Survey</string>
+    <string name="next_button">Next</string>
+    <string name="question_label">Question</string>
+    <string name="login_label">User Login</string>
+    <string name="hint_enter_login">Enter user name</string>
+    <string name="label_Password">Password</string>
+    <string name="hint_enter_password">Enter password</string>
+    <string name="login_label_button">Login</string>
+    <string name="user_survey_label">USER SURVEY</string>
+    <string name="label_result">YOUR SURVEY HAS BEEN SUBMITTED!!!! THANKS!!!!!!</string>
+</resources>
